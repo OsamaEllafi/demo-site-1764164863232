@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - Maawa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/dashboard.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <!-- Header with dashboard link -->
+        <div class="container">
+            <div class="grid">
+                <div class="col-3 col-md-2">
+                    <a href="index.html" class="logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <path d="M10 10 L10 30 L20 20 L30 30 L30 10 Z" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 15 Q20 10 25 15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                        <span>Maawa</span>
+                    </a>
+                </div>
+                <nav class="col-6 col-md-8 nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Listings</a></li>
+                        <li><a href="owner-dashboard.html">Owner Dashboard</a></li>
+                        <li><a href="tenant-dashboard.html">Tenant Dashboard</a></li>
+                    </ul>
+                </nav>
+                <div class="col-3 col-md-2 auth">
+                    <button class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            <div class="grid">
+                <aside class="col-3 sidebar">
+                    <nav>
+                        <ul>
+                            <li><a href="#stats">Stats</a></li>
+                            <li><a href="#listings">Listings</a></li>
+                            <li><a href="#add-property">Add Property</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="col-9 content">
+                    <section id="stats" class="stats-cards reveal fade-up">
+                        <div class="grid">
+                            <div class="col-4">
+                                <div class="stat-card">
+                                    <h3>$5,240</h3>
+                                    <p>Monthly Earnings</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-card">
+                                    <h3>12</h3>
+                                    <p>Bookings</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-card">
+                                    <h3>98%</h3>
+                                    <p>Occupancy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="listings" class="listings-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th>Bookings</th>
+                                    <th>Earnings</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Modern Loft</td>
+                                    <td>5</td>
+                                    <td>$2,500</td>
+                                    <td><button>Edit</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Footer -->
+    </footer>
+</body>
+</html>
