@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listings - Maawa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <!-- Header same as index -->
+    <header class="header">
+        <!-- Copy header from index.html -->
+        <div class="container">
+            <div class="grid">
+                <div class="col-3 col-md-2">
+                    <a href="index.html" class="logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <path d="M10 10 L10 30 L20 20 L30 30 L30 10 Z" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 15 Q20 10 25 15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                        <span>Maawa</span>
+                    </a>
+                </div>
+                <nav class="col-6 col-md-8 nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Listings</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="col-3 col-md-2 auth">
+                    <button class="btn btn-secondary" onclick="openModal('login-modal')">Login</button>
+                    <button class="btn btn-primary" onclick="openModal('signup-modal')">Sign Up</button>
+                </div>
+                <div class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-section reveal fade-up">
+            <div class="container">
+                <div class="grid">
+                    <div class="col-12">
+                        <div class="search-bar listings-search">
+                            <!-- Similar to hero search -->
+                            <div class="search-group">
+                                <label>Location</label>
+                                <input type="text" placeholder="Anywhere">
+                            </div>
+                            <div class="search-group">
+                                <label>Check-in</label>
+                                <input type="date">
+                            </div>
+                            <div class="search-group">
+                                <label>Check-out</label>
+                                <input type="date">
+                            </div>
+                            <div class="search-group">
+                                <label>Guests</label>
+                                <input type="number" placeholder="Add guests">
+                            </div>
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="listings-grid reveal fade-up">
+            <div class="container">
+                <div class="grid">
+                    <aside class="col-3 col-md-3 filters">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <h4>Price</h4>
+                            <input type="range" min="0" max="500" value="200">
+                        </div>
+                        <div class="filter-group">
+                            <h4>Rooms</h4>
+                            <label><input type="checkbox"> 1 Bed</label>
+                            <label><input type="checkbox"> 2 Beds</label>
+                            <label><input type="checkbox"> 3+ Beds</label>
+                        </div>
+                    </aside>
+                    <div class="col-9 col-md-9 listings-container">
+                        <div class="property-card">
+                            <div class="card-image" style="background-image: url('https://picsum.photos/400/300?random=4');"></div>
+                            <div class="card-content">
+                                <h3>Cozy Cabin</h3>
+                                <p>Mountain retreat</p>
+                                <div class="price">$180/night</div>
+                                <div class="rating">★★★★☆ 4.8</div>
+                            </div>
+                        </div>
+                        <!-- Duplicate cards for demo -->
+                        <div class="property-card">
+                            <div class="card-image" style="background-image: url('https://picsum.photos/400/300?random=5');"></div>
+                            <div class="card-content">
+                                <h3>Luxury Penthouse</h3>
+                                <p>City skyline</p>
+                                <div class="price">$350/night</div>
+                                <div class="rating">★★★★★ 5.0</div>
+                            </div>
+                        </div>
+                        <!-- More... -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12">
+                    <p>&copy; 2024 Maawa. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals same -->
+    <div id="login-modal" class="modal" role="dialog" aria-labelledby="login-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('login-modal')" aria-label="Close">×</button>
+            <h3 id="login-title">Login</h3>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="signup-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('signup-modal')" aria-label="Close">×</button>
+            <h3 id="signup-title">Sign Up</h3>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
